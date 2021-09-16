@@ -20,7 +20,7 @@ export default class CharDetails extends Component {
           </li>
           <li className="list-group-item d-flex justify-content-between">
             {/* <span className="term">Contributor</span> */}
-            <span>Niga</span>
+            <span>Ninja</span>
           </li>
         </ul>
       </div>
