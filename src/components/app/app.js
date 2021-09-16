@@ -31,7 +31,7 @@ const App = () => {
   );
 };
 
-const a = new GitApi();
-a.getAllRepos().then((res) => console.log(res));
+// const a = new GitApi();
+// a.getAllRepos().then((res) => console.log(res));
 
 export default App;
