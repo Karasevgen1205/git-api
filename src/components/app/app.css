@@ -1,0 +1,26 @@
+.angula-rank {
+    background-color: rgb(237, 236, 236);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    color: chocolate;
+    padding: 100px 0;
+}
+
+.name-list {
+    margin: 100px 0;
+    list-style: none;
+}
+
+.name-item {
+    margin: 20px 0;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: Time New Roman, serif;
+}

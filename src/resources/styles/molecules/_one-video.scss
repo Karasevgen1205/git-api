@@ -1,0 +1,126 @@
+.one-video {
+  margin: 150px 0;
+
+  &__title {
+    margin-bottom: 60px;
+    font-style: 55px;
+    line-height: 65px;
+  }
+
+  &__video {
+    will-change: opacity;
+
+    .vjs-control {
+      width: 6em;
+    }
+
+    .vjs-time-control {
+      width: 3em;
+      font-size: 2em;
+      line-height: 3.4em;
+      padding: 0;
+    }
+    .vjs-big-play-button {
+      top: calc(50% - 52px);
+      left: calc(50% - 52px);
+      height: 104px;
+      width: 104px;
+      border: none;
+      border-radius: 50%;
+      background-color: #f5f6fa;
+      color: rgba(28, 26, 18, 0.9);
+      font-size: 7em;
+    }
+
+    &:hover {
+      .vjs-big-play-button {
+        opacity: 0.6;
+        background-color: #f5f6fa;
+        transition: all 0.2s linear;
+      }
+    }
+
+    .vjs-control-bar {
+      height: 7em;
+      background-color: rgba($color: #000000, $alpha: 0);
+
+      .vjs-play-control,
+      .vjs-picture-in-picture-control,
+      .vjs-fullscreen-control {
+        .vjs-icon-placeholder {
+          &:before {
+            font-size: 4em;
+          }
+        }
+      }
+
+      .vjs-progress-control {
+        margin-left: 25px;
+      }
+
+      .vjs-volume-horizontal {
+        top: 20px;
+      }
+
+      .vjs-volume-panel {
+        .vjs-control {
+          .vjs-icon-placeholder {
+            &:before {
+              font-size: 4em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__change-poster {
+    .vjs-big-play-button {
+      display: block;
+    }
+
+    .vjs-control-bar {
+      display: block;
+      // display: none;
+
+      .vjs-play-control {
+        display: none;
+      }
+
+      .vjs-volume-panel {
+        display: none;
+      }
+
+      .vjs-progress-control {
+        display: block;
+        width: 88%;
+        top: -2em;
+        margin: 0 auto;
+
+        .vjs-progress-holder {
+          background-color: rgba(222, 216, 231, 0.4);
+          height: 5px;
+
+          .vjs-play-progress {
+            background: rgba(222, 216, 231, 0.8);
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @mixin fake-tools($padding-x: $container-padding-x) {
+//   width: 100%;
+//   padding-right: $padding-x;
+//   padding-left: $padding-x;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
+
+// .fake-container {
+//   @include fake-tools(0);
+// }
