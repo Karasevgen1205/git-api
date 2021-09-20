@@ -18,8 +18,8 @@ export default class GitApi {
     return await res.json();
   }
 
-  getAllRepos() {
-    return this.getResource("/orgs/angular/repos?per_page=5&page=1");
+  getAllRepos(count = 5) {
+    return this.getResource(`/orgs/angular/repos?per_page=${count}&page=1`);
   }
   getOneRepo(repo) {
     return this.getResource(`/repos/angular/${repo}`);
@@ -32,5 +32,17 @@ export default class GitApi {
   }
   getAllReposForOneContrib(name) {
     return this.getResource(`/users/${name}/repos`);
+  }
+  getRandomRepo(id) {
+    return this.getResource(`/repositories/${id}`);
+  }
+  _transformRepos(repo) {
+    return {
+      node_id: repo.node_id,
+      name: repo.name,
+      description: repo.description,
+      contributors: repo.contributors_url,
+      created_at: repo.created_at,
+    };
   }
 }
