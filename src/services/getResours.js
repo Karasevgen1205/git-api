@@ -1,12 +1,12 @@
 import React from "react";
-
+import { headers } from "../constants";
 export default class GitApi {
   constructor() {
     this._apiBase = "https://api.github.com";
   }
 
   async getResource(url) {
-    const res = await fetch(`${this._apiBase}${url}`);
+    const res = await fetch(`${this._apiBase}${url}`, { headers });
 
     if (!res.ok) {
       throw new Error(

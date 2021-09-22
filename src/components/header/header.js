@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const HeaderBlock = styled.div`
   display: flex;
@@ -26,25 +27,29 @@ const HeaderLinks = styled.ul`
   }
 `;
 
-const Header = () => {
-  return (
-    <HeaderBlock>
-      <HeaderTitle>
-        <a href="#">Angular challenge</a>
-      </HeaderTitle>
-      <HeaderLinks>
-        <li>
-          <a href="#">All repos</a>
-        </li>
-        <li>
-          <a href="#">All contributors</a>
-        </li>
-        <li>
-          <a href="#">One repos</a>
-        </li>
-      </HeaderLinks>
-    </HeaderBlock>
-  );
-};
-
-export default Header;
+export default class Header extends Component {
+  render() {
+    return (
+      <HeaderBlock>
+        <HeaderTitle>
+          <a href="#">Angular challenge</a>
+        </HeaderTitle>
+        <HeaderLinks>
+          <li>
+            <a href="#" onClick={this.props.updateAllRepos}>
+              All repos
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={this.props.updateAllContrib}>
+              All contributors
+            </a>
+          </li>
+          <li>
+            <a href="#">One repos</a>
+          </li>
+        </HeaderLinks>
+      </HeaderBlock>
+    );
+  }
+}

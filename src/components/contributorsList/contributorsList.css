@@ -1,7 +1,19 @@
 .contributors__list {
     margin: 20px 0;
+    margin-left: 25%;
 }
 
 .contributors__item {
     margin: 10px 0;
+}
+
+.contributors__item span {
+    color: rgb(99, 99, 228);
+    cursor: pointer;
+    transition: color 0.1s linear;
+}
+
+.contributors__item span:hover {
+    color: red;
+    text-decoration: underline;
 }
